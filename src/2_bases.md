@@ -330,7 +330,7 @@ String premiereLigne = in.nextLine();
 
 ---
 
-**Ecrire**
+**Écrire**
 
 Pour écrire dans un fichier, on utilise un `PrintWriter`.
 
