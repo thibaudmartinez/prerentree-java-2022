@@ -1,0 +1,41 @@
+name: Main
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/main.yml'
+      - 'src/*'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/main.yml'
+      - 'src/*'
+
+concurrency: generate
+
+jobs:
+  generate:
+    name: Generate slides
+    runs-on: ubuntu-latest
+    env:
+      LANG: en_US.UTF-8
+      MARP_USER: 0:0
+      OUTPUT_DIR: slides
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Clean up
+      run: |
+        git rm ${OUTPUT_DIR}/*
+    - name: Generate PDF slides
+      uses: docker://marpteam/marp-cli:v2.0.4
+      with:
+        args: -o slides --theme-set themes/dauphine.css --allow-local-files --pdf --html -I src
+    - name: Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        file_pattern: slides/*.html slides/*.pdf
+        commit_message: '[auto] generate HTML and PDF slides'
