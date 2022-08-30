@@ -38,4 +38,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         file_pattern: slides/*.pdf
-        commit_message: '[auto] generate HTML and PDF slides'
+        commit_message: '[auto] generate PDF slides'
