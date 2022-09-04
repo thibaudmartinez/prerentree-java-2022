@@ -386,7 +386,15 @@ class Personne implements Nommable {
 }
 ```
 
-:information_source: Une classe peut implémenter plusieurs interfaces.
+---
+
+Une classe peut implémenter plusieurs interfaces.
+
+```java
+class Personne implements Nommable, Cloneable {
+    // implémentation des méthodes des interfaces
+}
+```
 
 ---
 
