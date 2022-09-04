@@ -66,9 +66,9 @@ public class Voiture extends Vehicule {
 
 ---
 
-## Accéder aux membres de la superclasse
+## Accéder aux membres de la super-classe
 
-On peut accéder aux attributs et méthodes de la superclasse depuis la sous-classe.
+On peut accéder aux attributs et méthodes de la super-classe depuis la sous-classe.
 
 ```java
 public class Vehicule {
@@ -114,7 +114,7 @@ public class Voiture extends Vehicule {
 }
 ```
 
-`super` est un mot clé spécial qui indique au compilateur d'**appeler la méthode de la superclasse**.
+`super` est un mot clé spécial qui indique au compilateur d'**appeler la méthode de la super-classe**.
 
 ---
 
@@ -414,9 +414,9 @@ for (var n : nommables) {
 
 ---
 
-### Etendre une interface
+### Étendre une interface
 
-A la manière de l'héritage pour les classes, on peut `extends` une interface existante pour en définir une nouvelle plus spécialisée.
+À la manière de l'héritage pour les classes, on peut `extends` une interface existante pour en définir une nouvelle plus spécialisée.
 
 ```java
 public interface FaisLe {

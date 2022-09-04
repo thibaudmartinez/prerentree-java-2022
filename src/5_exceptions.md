@@ -41,7 +41,7 @@ Par exemple,
 
 ## Fonctionnement
 
-Chaque méthode à une voie de sortie alternative si elle n'est pas en mesure d'accomplir sa tâche de manière normale.
+Chaque méthode a une voie de sortie alternative si elle n'est pas en mesure d'accomplir sa tâche de manière normale.
 
 * La méthode **lève une exception** : elle un crée un **objet** exception qui contient les informations relatives à l'erreur et le transmet au système d'exécution.
 * Elle **ne renvoie pas de valeur** et son exécution est **interrompue**.

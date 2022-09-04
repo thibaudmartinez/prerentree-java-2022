@@ -323,7 +323,7 @@ public class Cercle {}
 
 ### _Packages_ et arborescence de fichiers
 
-On met les fichiers classes dans un **répertoire** dont le nom reflête le **nom du package** auxquelles les classes appartiennent.
+On met les fichiers classes dans un **répertoire** dont le nom reflête le **nom du package** auquel les classes appartiennent.
 
 ```
 geometrie
