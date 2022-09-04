@@ -504,3 +504,55 @@ public class Personne {
     }
 }
 ```
+
+---
+
+## Stockage des données dans les variables
+
+* **Types élémentaires** : la variable contient réellement les données.
+
+* **Objets et tableaux (types références)** : la variable contient une **référence** vers l'adresse mémoire où se trouvent les données.
+
+---
+
+### Affectation et passage en argument de variables de type élémentaires
+
+```java
+public static void mtd(int n) {
+    n = n + 1;
+}
+```
+
+```java
+int v1 = 10;
+int v2 = v1;  // la valeur contenue dans v1 est copiée dans v2
+v2 = 9; // v1 vaut toujours 10
+
+mtd(v2);  // mtd opère sur une copie de v2
+// v2 vaut toujours 9
+```
+
+---
+
+### Affectation et passage en argument de variables de type référence
+
+```java
+class MonInt {
+    int valeur;
+
+    MonInt(int valeur) { this.valeur = valeur; }
+
+    public static void donneLaValeur10(MonInt o) { o.valeur = 10; }
+}
+```
+
+```java
+var m1 = new MonInt(1); // m1 contient une référence vers l'objet.
+var m2 = m1; // La référence est copiée, m2 pointe vers le même objet que m1.
+m2.valeur = 2;  // Modifier m1 modifie m2, m1.valeur vaut 10.
+
+MonInt.donneLaValeur10(m1);  // Une référence vers l'objet est passée à la méthode
+
+// La méthode a modifié la valeur de l'objet.
+// m1.valeur et m2.valeur valent 10.
+```

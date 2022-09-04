@@ -597,6 +597,6 @@ public static void mtd(int n) {
 }
 
 int v = 10;
-mtd(v)
+mtd(v);
 // v vaut toujours 10
 ```
